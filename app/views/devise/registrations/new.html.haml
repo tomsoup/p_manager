@@ -1,3 +1,6 @@
+%script{:language => "Javascript"}
+  Stripe.setPublishableKey("#{ENV['STRIPE_TEST_PUBLISHABLE_KEY']}");
+
 = bootstrap_devise_error_messages!
 .panel.panel-default.devise-bs
   .panel-heading
