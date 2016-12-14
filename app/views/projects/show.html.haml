@@ -26,6 +26,12 @@
       = model_class.human_attribute_name(:tenant_id)
       \:
   %dd= @project.tenant_id
+%h3
+  Artifacts
+  = render 'artifacts/list', artifacts: @project.artifacts
+%br
+%br
+
 = link_to '< Back to Organization home', root_path, :class => 'btn btn-default'
 
 = link_to t('.edit', :default => t("helpers.links.edit")), edit_tenant_project_path(project: @project, tenant: @project.tenant_id), :class => 'btn btn-default'

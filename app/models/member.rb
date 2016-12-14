@@ -1,11 +1,11 @@
 class Member < ActiveRecord::Base
-   
+
   belongs_to :user
   acts_as_tenant
 
   DEFAULT_ADMIN = {
     first_name: "Admin",
-    last_name:  "Please edit me"
+    last_name:  "User"
   }
 
   def self.create_new_member(user, params)
@@ -20,7 +20,7 @@ class Member < ActiveRecord::Base
     end
 
     return new_member
-      
+
   end
 
 end

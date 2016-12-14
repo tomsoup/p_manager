@@ -12,7 +12,7 @@
     %tbody
       - @projects.each do |project|
         %tr
-          %td= link_to project.title, tenant_projects_path(project, tenant_id: @tenant.id), class: 'main-link'
+          %td= link_to project.title,  tenant_project_path(project, tenant_id: @tenant.id), class: 'main-link'
           %td= project.title
           %td= project.details
           %td= project.expected_completion_date
